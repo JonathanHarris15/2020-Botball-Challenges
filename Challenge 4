@@ -1,0 +1,11 @@
+#include <kipr/botball.h>
+#include </home/root/Documents/KISS/Jonathan H/main/include/JonathanLibrary.h>
+
+int main()
+{
+    callibrate_blacknwhite(1);
+    square_up(0.4,10);
+    lock(10);
+    
+    return 0;
+}
