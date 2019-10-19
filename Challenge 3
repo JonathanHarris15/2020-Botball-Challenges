@@ -1,0 +1,72 @@
+#include <kipr/botball.h>
+#include </home/root/Documents/KISS/Jonathan H/main/include/JonathanLibrary.h>
+
+void setup();
+
+int main()
+{
+    setup();
+    callibrate_blacknwhite(1);
+    
+    //square up x
+    drive(2940,500);
+    rigid_square_up(200,0);
+    square_up(0.4,10);
+    lock(10);
+    
+    //square up y 
+    drive(1890,-400);
+    left(630, 400, 0);
+    rigid_square_up(200,0);
+    square_up(0.4,10);
+    lock(10);
+    
+    //grab first cube
+    drive(6300,400);
+    servo(0, 0, 0);
+    servo(3, 1961, 0);
+    
+    //go to second cube
+    servo(0, 400, 1);
+    drive(1900, -400);
+    right(633, 400, 0);
+    
+    //set down first cube on top of second cube 
+    drive(400, -300);
+    servo(0, 250, 2);
+    servo(3, 1340, 0);
+    
+    //grab both cubes 
+    servo(0, 35, 1);
+    drive(300, 300);
+    servo(3, 2047, 0);
+    servo(0, 1495, 1);
+    
+    //square up on start box
+    right(633, 400, 0);
+    drive(3100, 400);
+    rigid_square_up(200,0);
+    square_up(0.4,10);
+    lock(10);
+    
+    //turn to other block
+    drive(1300, -400);
+    right(633, 400, 0);
+    drive(630, - 400);
+    
+    //drop
+    servo(0, 354, 1);
+    
+   
+    
+    
+    return 0;
+}
+
+
+void setup(){
+    
+    servo(0,69,0);
+    servo(3,901,0);
+    
+}
